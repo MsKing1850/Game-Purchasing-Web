@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+.your-cart {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
@@ -87,4 +87,129 @@ p {
     font-size: 1.2em;
     font-style: italic;
     color: #777;
+}
+.skeleton-preloader {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skeleton {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    animation: shimmer 1.5s infinite linear;
+}
+
+.skeleton-text {
+    width: 60%;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.skeleton-line {
+    width: 90%;
+    height: 15px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+.skeleton::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        #e0e0e0 0%,
+        #f0f0f0 50%,
+        #e0e0e0 100%
+    );
+    background-size: 200% 100%;
+}
+
+header{
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    height: 75px;
+    font-family: gill sans;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+nav ul{
+    display: flex;
+  gap: 1rem;
+    list-style: none;
+    margin-right: 50px;
+    
+}
+nav a{
+   color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+#home:hover::after{
+    content: "Home";
+    display: block; 
+    text-align: center; 
+    margin-top: 5px; 
+    font-size: 14px; 
+    color: black;
+    position: fixed;
+}
+#product:hover::after{
+    content: "Product";
+    display: block; 
+    text-align: center; 
+    margin-top: 5px; 
+    font-size: 14px; 
+    color: black;
+    position: fixed;
+}
+#contact:hover::after{
+    content: "Contact";
+    display: block; 
+    text-align: center; 
+    margin-top: 5px; 
+    font-size: 14px; 
+    color: black;
+    position: fixed;
+}
+#cart:hover::after{
+    content: "Cart";
+    display: block; 
+    text-align: center; 
+    margin-top: 5px; 
+    font-size: 14px; 
+    color: black;
+    position: fixed;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+.logo{
+    margin-left: 50px;
+    font-size: 25px;
+    text-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff, 
+    0 0 15px red, 
+    0 0 20px red, 
+    0 0 30px red, 
+    0 0 40px red, 
+    0 0 50px red, 
+    0 0 75px red; 
 }

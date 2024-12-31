@@ -54,3 +54,11 @@ buyButtons.forEach(button => {
 
 
 window.onload = loadCartFromLocalStorage;
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        document.querySelector(".preloader").style.display = "none";
+        document.querySelectorAll(".hidden").forEach(el => el.classList.remove("hidden"));
+    }, 2000); // Simulate 2 seconds loading time
+});
